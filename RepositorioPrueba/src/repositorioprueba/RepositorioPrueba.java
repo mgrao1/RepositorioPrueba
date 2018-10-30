@@ -27,14 +27,18 @@ public class RepositorioPrueba {
         System.out.println("Introduce un caracter");
         caracter=sc.nextLine().charAt(0);
         
+
+        System.out.println("El caracter "+caracter+" se ha encontrado "+contador(caracter,cadena)+" veces en la cadena "+cadena);
+    }
+    public static int contador(char caracter,String cadena){
+        
+        int contador=0;
         for(int i=0;i<cadena.length();i++){
             
-            if(caracter==cadena.charAt(i)){
-                contador++;
-            }
-            
+            if(caracter==cadena.charAt(i))
+                contador++;    
         }
-        System.out.println("El caracter "+caracter+" se ha encontrado "+contador+" veces en la cadena "+cadena);
+        return contador;
     }
     
 }
